@@ -1,0 +1,30 @@
+{
+  "name": "discord-bot-over",
+  "version": "1.0.0",
+  "description": "test over bot 24/7",
+  "main": "bot.js",
+  "engines": {
+	"node": "8.x",
+	"npm": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+	"start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarant00/over-bot-24-7.git"
+  },
+  "keywords": [
+    "overSlept"
+  ],
+  "author": "TheNoob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarant00/over-bot-24-7/issues"
+  },
+  "homepage": "https://github.com/sarant00/over-bot-24-7#readme",
+  "dependencies": {
+    "discord.js": "^11.3.0"
+  }
+}
