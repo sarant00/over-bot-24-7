@@ -22,7 +22,7 @@ client.on('message', msg => {
 	var milleSec = calTime*60 *1000;
 	var waitTime = calTime+1;
 	if(msg.content.startsWith("!") && minTime.length === 2 && isnum){
-		if(waitTime < 0){
+		if(waitTime <= 0){
 			msg.reply("อย่ามั่วสิเดี๋ยวโปรแกรมบัค");
 		}else{
 		msg.reply(msgtext+" อีก "+waitTime+" นาทีเจอกันนะจ๊ะ");
