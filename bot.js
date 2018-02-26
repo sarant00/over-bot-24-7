@@ -17,12 +17,12 @@ client.on('message', msg => {
 		if(minTime > 15 )
 			dMin += 60;
 	var calTime = 14-(dMin - minTime);
-	if(calTime < 0 )
-		calTime = 0;
+	if(calTime < -1 )
+		calTime = -1;
 	var milleSec = calTime*60 *1000;
 	var waitTime = calTime+1;
 	if(msg.content.startsWith("!") && minTime.length === 2 && isnum){
-		if(calTime <= 0){
+		if(waitTime < 0){
 			msg.reply("อย่ามั่วสิเดี๋ยวโปรแกรมบัค");
 		}else{
 		msg.reply(msgtext+" อีก "+waitTime+" นาทีเจอกันนะจ๊ะ");
