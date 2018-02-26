@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  NOTIFY_CHANNEL = client.channels.find('id', '415424251693105161'); // Channel to send notification
+  NOTIFY_CHANNEL = client.channels.find('id', process.env.ROOM_SEND_MSG); // Channel to send notification
 });
 
 client.on('message', msg => {
@@ -21,18 +21,21 @@ client.on('message', msg => {
 		calTime = -1;
 	var milleSec = calTime*60 *1000;
 	var waitTime = calTime+1;
+	
+	let marKetRole = msg.guild.roles.find("name", process.env.ROLE_MARKET_NAME);
+	
 	if(msg.content.startsWith("!") && minTime.length === 2 && isnum){
-		if(waitTime < 0){
+		if(waitTime < -1){
 			msg.reply("อย่ามั่วสิเดี๋ยวโปรแกรมบัค");
 		}else{
 		msg.reply(msgtext+" อีก "+waitTime+" นาทีเจอกันนะจ๊ะ");
-		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(msgtext +"  อีก 1 นาทีจะลงตลาด");},milleSec);
+		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+" >>> "+msgtext +"  อีก 1 นาทีจะลงตลาด");},milleSec);
 		}
 	}
 	if (msg.content === 'ping') {
 		msg.reply('สกุลกาก');
   }
 });
-
+//415424251693105161
  client.login(process.env.BOT_TOKEN); 
 
