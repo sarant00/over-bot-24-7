@@ -4,8 +4,8 @@
   "description": "test over bot 24/7",
   "main": "bot.js",
   "engines": {
-	"node": "8.x",
-	"npm": "*"
+    "node": "8.x",
+    "npm": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

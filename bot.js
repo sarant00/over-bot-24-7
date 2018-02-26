@@ -14,7 +14,8 @@ client.on('message', msg => {
 	var d = new Date();
 	var dMin =  d.getMinutes();
 	if(dMin < 15)
-		dMin += 60;
+		if(minTime > 15 )
+			dMin += 60;
 	var calTime = 14-(dMin - minTime);
 	if(calTime < 0 )
 		calTime = 0;
