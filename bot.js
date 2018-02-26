@@ -26,15 +26,21 @@ client.on('message', msg => {
 	
 	if(msg.content.startsWith("!") && minTime.length === 2 && isnum){
 		if(waitTime < -1){
-			msg.reply("อย่ามั่วสิเดี๋ยวโปรแกรมบัค");
+			NOTIFY_CHANNEL.sendMessage(msg.member+"  ฮั่นแน่จะลองของกับบอทโง่หรอเดี๋ยวรู้เลย!!!! ของมันออกไปแล้วเฟ้ย");
 		}else{
 		msg.reply(msgtext+" อีก "+waitTime+" นาทีเจอกันนะจ๊ะ");
-		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+" >>> "+msgtext +"  อีก 1 นาทีจะลงตลาด");},milleSec);
+		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+">>>"+msgtext +"  อีก 1 นาทีจะลงตลาด");},milleSec);
 		}
 	}
-	if (msg.content === 'ping') {
+	if (msg.content === 'ping') 
 		msg.reply('สกุลกาก');
-  }
+	if (msg.content === 'pong') 
+		msg.reply('โคตรหล่ออ่ะ');
+	if (msg.content === 'หูย') 
+		msg.reply('หยวกขาหญ่ายๆ');
+	if (msg.content === 'รายงาน') 
+		msg.reply('มีเรื่องแล้วหัวกิล');
+  
 });
 //415424251693105161
  client.login(process.env.BOT_TOKEN); 
