@@ -17,15 +17,15 @@ client.on('message', msg => {
 		if(minTime > 15 )
 			dMin += 60;
 	var calTime = 14-(dMin - minTime);
-	if(calTime < -1 )
-		calTime = -1;
+	if(calTime < -2 )
+		calTime = -2;
 	var milleSec = calTime*60 *1000;
 	var waitTime = calTime+1;
 	
 	let marKetRole = msg.guild.roles.find("name", process.env.ROLE_MARKET_NAME);
 	
 	if(msg.content.startsWith("!") && minTime.length === 2 && isnum){
-		if(waitTime < -1){
+		if(waitTime < 0){
 			NOTIFY_CHANNEL.sendMessage(msg.member+"  ฮั่นแน่จะลองของกับบอทโง่หรอเดี๋ยวรู้เลย!!!! ของมันออกไปแล้วเฟ้ย");
 		}else{
 		msg.reply(msgtext+" อีก "+waitTime+" นาทีเจอกันนะจ๊ะ");
