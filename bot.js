@@ -29,7 +29,7 @@ client.on('message', msg => {
 			NOTIFY_CHANNEL.sendMessage(msg.member+"  ฮั่นแน่จะลองของกับบอทโง่หรอเดี๋ยวรู้เลย!!!! ของมันออกไปแล้วเฟ้ย");
 		}else{
 		msg.reply(msgtext+" อีก "+waitTime+" นาทีเจอกันนะจ๊ะ");
-		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+">>>"+msgtext +"  อีก 1 นาทีจะลงตลาด");},milleSec);
+		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+">>>"+msgtext +"  อีก 1 นาทีจะลงตลาด และไอ้คุณ" +msg.member+"อย่าลืมไปบิดของนะเว้ยเห้ยเห้ยเห้ย!!!!!" );},milleSec);
 		}
 	}
 	if (msg.content === 'ping') 
@@ -40,6 +40,8 @@ client.on('message', msg => {
 		msg.reply('หยวกขาหญ่ายๆ');
 	if (msg.content === 'รายงาน') 
 		msg.reply('มีเรื่องแล้วหัวกิล');
+	if (msg.content === 'บอทน้อยอวยพรหน่อย') 
+		msg.reply('ขอให้ท่าน'+msg.member+'จงโชคดีมีชัยทำอะไรก็ดีไปหมดตีบวกก็ติดสุ่มประดับไม่เกลือด้วยเทอญ ขอให้พลังของบอทน้อยสถิตอยู่กับทั่น');
   
 });
 //415424251693105161
