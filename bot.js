@@ -3,6 +3,10 @@ require('dotenv').load();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+function randomIntFromInterval(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   NOTIFY_CHANNEL = client.channels.find('id', process.env.ROOM_SEND_MSG); // Channel to send notification
@@ -34,8 +38,84 @@ client.on('message', msg => {
 		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+">>>"+msgtext +"  อีก 1 นาทีจะลงตลาด และไอ้คุณ" +msg.member+"อย่าลืมไปบิดของนะเว้ยเห้ยเห้ยเห้ย!!!!!" );},milleSec);
 		}
 	}
-	if (msg.content === 'ตู้') 
-		msg.reply('ควยทู่');
+	if (msg.content === 'เทพพระเจ้าแกะ') {
+		switch (randomIntFromInterval(1, 5)) {
+			case 1:
+				msg.reply("``` \n \
+           __  _ \n \
+       .-.'  `; `-._  __  _ \n \
+      (_,         .-:'  `; `-._ \n \
+    ,'o\"(        (_,           ) \n \
+   (__,-'      ,'o\"(            )> \n \
+      (       (__,-'            ) \n \
+       `-'._.--._(             ) \n \
+          |||  |||`-'._.--._.-' \n \
+                     |||  ||| ```");
+				break;
+				
+			case 2:
+				msg.reply("``` \n \
+                     _,._ \n \
+                 __.'   _) \n \
+                <_,)'.-\"a\ \n \
+                  /' (    \ \n \
+      _.-----..,-'   (`\"--^ \n \
+     //              | \n \
+    (|   `;      ,   | \n \
+      \   ;.----/  ,/ \n \
+       ) // /   | |\ \ \n \
+       \ \\`\   | |/ / \n \
+        \ \\ \  | |\/ \n \
+         `" `"  `"` ```");
+				break;
+				
+			case 3:
+				msg.reply("``` \n \
+                        _.-.. \n \
+                      ,'9 )\)`-.,.--. \n \
+                      `-.|           `. \n \
+                         \,      ,    \) \n \
+                          `.  )._\   (\ \n \
+                            |//   `-,// \n \
+                            ]||    //\" \n \
+                            \"\"    \"\" ```");
+				break;
+				
+			case 4:
+				msg.reply("``` \n \
+                      __ \n \
+            ,'```--'''  ``-''-. \n \
+          ,'            ,-- ,-'. \n \
+         (//            `\"'| 'a \ \n \
+           |    `;         |--._/ \n \
+           \    _;-._,    / \n \
+            \__/\\   \__,' \n \
+             ||  `'   \|\\ \n \
+             \\        \\`' \n \
+              `'        `' ```");
+				break;
+				
+		  	case 5:
+				msg.reply("``` \n \
+  ,-''''-. \n \
+ (.  ,.   L        ___...__ \n \
+ /7} ,-`  `'-==''``        ''._ \n \
+//{                           '`. \n \
+\_,X ,                         : ) \n \
+    7                          ;` \n \
+    :                  ,       / \n \
+     \_,                \     ; \n \
+       Y   L_    __..--':`.    L \n \
+       |  /| ````       ;  y  J \n \
+       [ j J            / / L ; \n \
+       | |Y \          /_J  | | \n \
+       L_J/_)         /_)   L_J \n \
+      /_)               sk /_) ```");
+		  		break;
+		}
+	}
+        if (msg.content === 'ตู้')
+                msg.reply('ควยทู่');
 	if (msg.content === 'ping') 
 		msg.reply('สกุลกาก');
 	if (msg.content === 'pong') 
