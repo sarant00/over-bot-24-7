@@ -39,7 +39,7 @@ client.on('message', msg => {
 		}
 	}
 	if (msg.content === 'เทพพระเจ้าแกะ') {
-		switch (randomIntFromInterval(1, 5)) {
+		switch (randomIntFromInterval(1, 3)) {
 			case 1:
 				msg.reply("``` \n \
            __  _ \n \
@@ -80,38 +80,6 @@ client.on('message', msg => {
                             ]||    //\" \n \
                             \"\"    \"\" ```");
 				break;
-				
-			case 4:
-				msg.reply("``` \n \
-                      __ \n \
-            ,'```--'''  ``-''-. \n \
-          ,'            ,-- ,-'. \n \
-         (//            `\"'| 'a \ \n \
-           |    `;         |--._/ \n \
-           \\    _;-._,    / \n \
-            \\__/\\\\   \\__,' \n \
-             ||  `'   \\|\\\\ \n \
-             \\\\        \\\\`' \n \
-              `'        `' ```");
-				break;
-				
-		  	case 5:
-				msg.reply("``` \n \
-  ,-''''-. \n \
- (.  ,.   L        ___...__ \n \
- /7} ,-`  `'-==''``        ''._ \n \
-//{                           '`. \n \
-\\_,X ,                         : ) \n \
-    7                          ;` \n \
-    :                  ,       / \n \
-     \\_,                \\     ; \n \
-       Y   L_    __..--':`.    L \n \
-       |  /| ````       ;  y  J \n \
-       [ j J            / / L ; \n \
-       | |Y \\          /_J  | | \n \
-       L_J/_)         /_)   L_J \n \
-      /_)               sk /_) ```");
-		  		break;
 		}
 	}
         if (msg.content === 'ตู้')
