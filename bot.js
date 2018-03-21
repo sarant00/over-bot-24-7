@@ -34,6 +34,8 @@ client.on('message', msg => {
 		setTimeout(function(){NOTIFY_CHANNEL.sendMessage(marKetRole+">>>"+msgtext +"  อีก 1 นาทีจะลงตลาด และไอ้คุณ" +msg.member+"อย่าลืมไปบิดของนะเว้ยเห้ยเห้ยเห้ย!!!!!" );},milleSec);
 		}
 	}
+	if (msg.content === 'ตู้') 
+		msg.reply('ควยทู่');
 	if (msg.content === 'ping') 
 		msg.reply('สกุลกาก');
 	if (msg.content === 'pong') 
