@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/sarant00/over-bot-24-7#readme",
   "dependencies": {
-    "discord.js": "^11.3.0"
+    "discord.js": "^11.3.0",
+    "dotenv": "^5.0.1"
   }
 }
